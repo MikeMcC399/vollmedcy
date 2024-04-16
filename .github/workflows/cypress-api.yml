@@ -1,9 +1,10 @@
-name: Cypress Tests
+name: Cypress Tests API
 
 on:
   push:
     branches:
       - testes-cy
+  workflow_dispatch:
 
 jobs:
   cypress-run:
@@ -16,7 +17,7 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v4
-        with: 
+        with:
           path: server
 
       - name: Start Server BackEnd
